@@ -4,8 +4,8 @@
 
 const ProjectNames = 
 [
-    "mapex",
-    "mirage",
+    "parkour3d",
+    "controlrig",
     "final_turn",
     "climbing_systems",
     "console_rift",
