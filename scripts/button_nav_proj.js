@@ -4,11 +4,11 @@
 
 const ProjectNames = 
 [
-    "parkour3d",
-    "controlrig",
-    "final_turn",
-    "climbing_systems",
     "console_rift",
+    "final_turn",         
+    "climbing_systems",
+    "controlrig",
+    "parkour3d",
     "match3"
 ]
 
