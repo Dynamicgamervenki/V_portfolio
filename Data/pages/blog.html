@@ -1,4 +1,13 @@
-﻿<div id="blog-menu">
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Motion Builder Essentials</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div id="blog-menu">
 
     <hr>
     <div id="pt">Browse my development blogs below!</div>
@@ -14,17 +23,23 @@
                      style="width: 200px; height: 150px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 10px; line-height: 1.5;"
                      onclick="document.getElementById('blog-menu').style.display='none'; document.getElementById('blog-post-1').style.display='block';">
 
-                    <div style="font-weight: bold; letter-spacing: 1px;">MOTION BUILDER<br>ESSENTIALS</div>
+                    <div style="font-weight: bold; letter-spacing: 1px;">MOTION BUILDER<br>ESSENTIALS – 01</div>
                     <div style="font-size: 0.7em; margin-top: 5px; color: #aaa;">Characterization & Retargeting</div>
+                </div>
+
+                <div class="btn-career-5"
+                     style="width: 200px; height: 150px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 10px; line-height: 1.5;"
+                     onclick="document.getElementById('blog-menu').style.display='none'; document.getElementById('blog-post-2').style.display='block';">
+
+                    <div style="font-weight: bold; letter-spacing: 1px;">MOTION BUILDER<br>ESSENTIALS – 02</div>
+                    <div style="font-size: 0.7em; margin-top: 5px; color: #aaa;">Poses, Mirroring & Layers</div>
                 </div>
 
                 <div class="btn-career-5"
                      style="width: 200px; height: 150px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 10px; opacity: 0.4; cursor: not-allowed; border-style: dashed;">
 
-                    <div style="font-weight: bold; letter-spacing: 1px; margin-bottom: 5px;">POSES</div>
-
+                    <div style="font-weight: bold; letter-spacing: 1px; margin-bottom: 5px;">EXPORTING</div>
                     <i class="fa fa-lock" aria-hidden="true" style="font-size: 1.5em; margin-bottom: 5px;"></i>
-
                     <div style="letter-spacing: 2px; font-size: 0.8em;">COMING SOON</div>
                 </div>
 
@@ -37,10 +52,10 @@
 <div id="blog-post-1" style="display: none;">
 
     <br><br><br>
-    
+
     <div class="edu">
         <div class="edu-title" style="text-align: center; letter-spacing: 2px;">
-            Motion Builder Essentials<br>
+            Motion Builder Essentials – 01<br>
             <span style="font-size: 0.7em;">Characterization & Retargeting</span>
         </div>
         <br>
@@ -48,23 +63,64 @@
         <div style="text-align: center; margin-bottom: 25px;">
             <iframe width="100%" height="400"
                     src="https://www.youtube.com/embed/tKGFt2BoBaQ"
-                    title="Motion Builder Essentials"
+                    title="Motion Builder Essentials 01"
                     frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
                     style="border: 1px solid #333; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
             </iframe>
         </div>
 
         <div style="text-align: justify; line-height: 1.6;">
-            <strong>Characterization</strong>
-            <br>
-            Characterization is the process of defining a character’s skeleton in Autodesk MotionBuilder by mapping each bone/joint (such as hips, spine, arms, and legs) to MotionBuilder’s standard character template. This mapping allows MotionBuilder to recognize the skeleton as a valid “Character,” enabling advanced animation tools such as Control Rigs, IK/FK manipulation, and animation retargeting.
+            <strong>Characterization</strong><br>
+            Characterization is the process of defining a character’s skeleton in Autodesk MotionBuilder by mapping each bone or joint to MotionBuilder’s standard character template.
             <br><br>
 
-            <strong>Retargeting</strong>
-            <br>
-            Retargeting is the process of transferring animation data from a source character to a target character in MotionBuilder. Once both characters are properly characterized, MotionBuilder can reinterpret the source animation (motion capture or keyframed animation) and apply it to the target skeleton.
+            <strong>Retargeting</strong><br>
+            Retargeting is the process of transferring animation data from a source character to a target character once both are properly characterized.
         </div>
     </div>
 </div>
+
+<div id="blog-post-2" style="display: none;">
+
+    <br><br><br>
+
+    <div class="edu">
+        <div class="edu-title" style="text-align: center; letter-spacing: 2px;">
+            Motion Builder Essentials – 02<br>
+            <span style="font-size: 0.7em;">Poses, Mirroring & Animation Layers</span>
+        </div>
+        <br>
+
+        <div style="text-align: center; margin-bottom: 25px;">
+            <iframe width="100%" height="400"
+                    src="https://www.youtube.com/embed/68DrqPlk8no"
+                    title="Motion Builder Essentials 02"
+                    frameborder="0"
+                    allowfullscreen
+                    style="border: 1px solid #333; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
+            </iframe>
+        </div>
+
+        <div style="text-align: justify; line-height: 1.6;">
+            <strong>What Are MotionBuilder Poses?</strong><br>
+            A Pose is a saved snapshot of your character’s skeletal position. It captures transforms of selected joints or the full body so you can quickly reuse the same configuration across animations.
+            <br><br>
+
+            <strong>What Can You Do with Poses?</strong><br>
+            • Save commonly used character positions<br>
+            • Apply poses to full body or selected parts<br>
+            • Mirror poses between left and right sides<br>
+            • Blend poses with existing animation<br>
+            • Keyframe poses into animation layers<br>
+            • Maintain non-destructive workflows<br>
+            • Use Match to keep spatial consistency<br>
+            • Speed up blocking and pose-to-pose animation<br>
+            • Build reusable pose libraries<br>
+            • Improve consistency across shots
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
