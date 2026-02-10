@@ -36,9 +36,17 @@
                 </div>
 
                 <div class="btn-career-5"
+                     style="width: 200px; height: 150px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 10px; line-height: 1.5;"
+                     onclick="document.getElementById('blog-menu').style.display='none'; document.getElementById('blog-post-3').style.display='block';">
+
+                    <div style="font-weight: bold; letter-spacing: 1px;">MOTION BUILDER<br>ESSENTIALS – 03</div>
+                    <div style="font-size: 0.7em; margin-top: 5px; color: #aaa;">Exporting</div>
+                </div>
+
+                <div class="btn-career-5"
                      style="width: 200px; height: 150px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 10px; opacity: 0.4; cursor: not-allowed; border-style: dashed;">
 
-                    <div style="font-weight: bold; letter-spacing: 1px; margin-bottom: 5px;">EXPORTING</div>
+                    <div style="font-weight: bold; letter-spacing: 1px; margin-bottom: 5px;">STORY MODE</div>
                     <i class="fa fa-lock" aria-hidden="true" style="font-size: 1.5em; margin-bottom: 5px;"></i>
                     <div style="letter-spacing: 2px; font-size: 0.8em;">COMING SOON</div>
                 </div>
@@ -118,6 +126,65 @@
             • Speed up blocking and pose-to-pose animation<br>
             • Build reusable pose libraries<br>
             • Improve consistency across shots
+        </div>
+    </div>
+</div>
+
+<div id="blog-post-3" style="display: none;">
+
+    <br><br><br>
+
+    <div class="edu">
+        <div class="edu-title" style="text-align: center; letter-spacing: 2px;">
+            Motion Builder Essentials – 03<br>
+            <span style="font-size: 0.7em;">Motion Builder → Unreal Engine: Exporting Animations</span>
+        </div>
+        <br>
+
+        <div style="text-align: center; margin-bottom: 25px;">
+            <iframe width="100%" height="400"
+                    src="https://www.youtube.com/embed/FYVBtFLXcN4"
+                    title="Motion Builder Essentials 03"
+                    frameborder="0"
+                    allowfullscreen
+                    style="border: 1px solid #333; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
+            </iframe>
+        </div>
+
+        <div style="text-align: justify; line-height: 1.6;">
+            Exporting animations from MotionBuilder to Unreal Engine is a critical step in any game animation pipeline. Even a small mistake during export can result in broken poses, missing motion, or incorrect imports inside Unreal. In this workflow, the key goal is to ensure that all animation data is baked correctly onto the skeleton and exported using the right FBX settings.
+            <br><br>
+
+            Before exporting, it is mandatory to bake the animation to bones. MotionBuilder often drives characters using control rigs or constraints, but Unreal Engine only understands bone animation data. Baking ensures that every frame of animation is converted into keyframes directly on the skeleton, making it fully compatible with Unreal’s animation system.
+            <br><br>
+
+            <strong>Key Exporting Steps</strong><br>
+            • Bake animation to bones before exporting<br>
+            • Ensure the correct Take is selected for export<br>
+            • Export only the necessary elements (Bones, Mesh if needed)<br>
+            • Avoid exporting control rigs, constraints, or extra scene data<br>
+            • Use FBX export settings optimized for game engines<br>
+            <br>
+            Baking the animation locks the motion into the skeleton and prevents issues such as missing animation, frozen characters, or incorrect transforms inside Unreal Engine.
+            <br><br>
+
+            <strong>FBX Export Settings in MotionBuilder</strong><br>
+            While exporting, it’s important to review each FBX option carefully. Exporting unnecessary data like cameras, lights, or control rigs can clutter the file and sometimes cause import warnings. Keeping the export clean—focused on bones and animation—results in a stable and predictable import in Unreal Engine. Selecting the correct take ensures that Unreal imports the intended animation clip.
+            <br><br>
+
+            <strong>Importing into Unreal Engine</strong><br>
+            Once inside Unreal Engine, animations should be imported by selecting the correct Skeletal Mesh. Unreal uses the skeletal hierarchy to properly map the animation data. Choosing the wrong skeletal mesh can lead to broken animations, incorrect bone rotations, or failed imports.
+            <br><br>
+
+            After import, it’s always a good practice to preview the animation inside Unreal to confirm:
+            <ul style="margin-top: 5px; margin-bottom: 5px;">
+                <li>The motion plays correctly</li>
+                <li>No bones are offset or twisted</li>
+                <li>The animation matches what was authored in MotionBuilder</li>
+            </ul>
+            <br>
+            <strong>Final Thoughts</strong><br>
+            A clean export pipeline saves a lot of debugging time later in production. By baking animations to bones, using proper FBX export settings, and selecting the correct skeletal mesh in Unreal Engine, you ensure a reliable and game-ready animation workflow.
         </div>
     </div>
 </div>
