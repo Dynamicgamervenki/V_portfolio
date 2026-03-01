@@ -44,9 +44,17 @@
                 </div>
 
                 <div class="btn-career-5"
+                     style="width: 200px; height: 150px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 10px; line-height: 1.5;"
+                     onclick="document.getElementById('blog-menu').style.display='none'; document.getElementById('blog-post-4').style.display='block';">
+
+                    <div style="font-weight: bold; letter-spacing: 1px;">MOTION BUILDER<br>ESSENTIALS – 04</div>
+                    <div style="font-size: 0.7em; margin-top: 5px; color: #aaa;">Story Mode</div>
+                </div>
+
+                <div class="btn-career-5"
                      style="width: 200px; height: 150px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 10px; opacity: 0.4; cursor: not-allowed; border-style: dashed;">
 
-                    <div style="font-weight: bold; letter-spacing: 1px; margin-bottom: 5px;">STORY MODE</div>
+                    <div style="font-weight: bold; letter-spacing: 1px; margin-bottom: 5px; text-align: center;">CLEANING UP<br>MOCAP DATA</div>
                     <i class="fa fa-lock" aria-hidden="true" style="font-size: 1.5em; margin-bottom: 5px;"></i>
                     <div style="letter-spacing: 2px; font-size: 0.8em;">COMING SOON</div>
                 </div>
@@ -111,11 +119,11 @@
         </div>
 
         <div style="text-align: justify; line-height: 1.6;">
-            <strong>What Are MotionBuilder Poses?</strong><br>
+            <strong>What Are MotionBuilder Poses?</strong><br><br>
             A Pose is a saved snapshot of your character’s skeletal position. It captures transforms of selected joints or the full body so you can quickly reuse the same configuration across animations.
             <br><br>
 
-            <strong>What Can You Do with Poses?</strong><br>
+            <strong>What Can You Do with Poses?</strong><br><br>
             • Save commonly used character positions<br>
             • Apply poses to full body or selected parts<br>
             • Mirror poses between left and right sides<br>
@@ -125,7 +133,7 @@
             • Use Match to keep spatial consistency<br>
             • Speed up blocking and pose-to-pose animation<br>
             • Build reusable pose libraries<br>
-            • Improve consistency across shots
+            • Improve consistency across shots<br>
         </div>
     </div>
 </div>
@@ -158,34 +166,129 @@
             Before exporting, it is mandatory to bake the animation to bones. MotionBuilder often drives characters using control rigs or constraints, but Unreal Engine only understands bone animation data. Baking ensures that every frame of animation is converted into keyframes directly on the skeleton, making it fully compatible with Unreal’s animation system.
             <br><br>
 
-            <strong>Key Exporting Steps</strong><br>
+            <strong>Key Exporting Steps</strong><br><br>
             • Bake animation to bones before exporting<br>
             • Ensure the correct Take is selected for export<br>
             • Export only the necessary elements (Bones, Mesh if needed)<br>
             • Avoid exporting control rigs, constraints, or extra scene data<br>
             • Use FBX export settings optimized for game engines<br>
-            <br>
+            <br><br>
             Baking the animation locks the motion into the skeleton and prevents issues such as missing animation, frozen characters, or incorrect transforms inside Unreal Engine.
             <br><br>
 
-            <strong>FBX Export Settings in MotionBuilder</strong><br>
+            <strong>FBX Export Settings in MotionBuilder</strong><br><br>
             While exporting, it’s important to review each FBX option carefully. Exporting unnecessary data like cameras, lights, or control rigs can clutter the file and sometimes cause import warnings. Keeping the export clean—focused on bones and animation—results in a stable and predictable import in Unreal Engine. Selecting the correct take ensures that Unreal imports the intended animation clip.
             <br><br>
 
-            <strong>Importing into Unreal Engine</strong><br>
+            <strong>Importing into Unreal Engine</strong><br><br>
             Once inside Unreal Engine, animations should be imported by selecting the correct Skeletal Mesh. Unreal uses the skeletal hierarchy to properly map the animation data. Choosing the wrong skeletal mesh can lead to broken animations, incorrect bone rotations, or failed imports.
             <br><br>
 
             After import, it’s always a good practice to preview the animation inside Unreal to confirm:
-            <ul style="margin-top: 5px; margin-bottom: 5px;">
-                <li>The motion plays correctly</li>
-                <li>No bones are offset or twisted</li>
-                <li>The animation matches what was authored in MotionBuilder</li>
-            </ul>
-            <br>
-            <strong>Final Thoughts</strong><br>
+            <br><br>
+            • The motion plays correctly<br>
+            • No bones are offset or twisted<br>
+            • The animation matches what was authored in MotionBuilder<br>
+            <br><br>
+            <strong>Final Thoughts</strong><br><br>
             A clean export pipeline saves a lot of debugging time later in production. By baking animations to bones, using proper FBX export settings, and selecting the correct skeletal mesh in Unreal Engine, you ensure a reliable and game-ready animation workflow.
         </div>
+    </div>
+</div>
+
+<div id="blog-post-4" style="display: none;">
+
+    <br><br><br>
+
+    <div class="edu">
+
+        <div class="edu-title" style="text-align: center; letter-spacing: 2px;">
+            Motion Builder Essentials – 4<br>
+            <span style="font-size: 0.7em;">
+                Blending Animations in Story Mode
+            </span>
+        </div>
+
+        <br>
+
+        <div style="text-align: center; margin-bottom: 25px;">
+            <iframe width="100%" height="400"
+                    src="https://www.youtube.com/embed/n5vKndaitBI"
+                    title="Motion Builder Essentials – 4"
+                    frameborder="0"
+                    allowfullscreen
+                    style="border: 1px solid #333; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
+            </iframe>
+        </div>
+
+        <div style="text-align: justify; line-height: 1.6;">
+
+            <strong>Blending Animations in Motion Builder Using Story Mode</strong><br><br>
+
+            In this episode of Motion Builder Essentials, we explore how to blend two animations smoothly using Story Mode in Autodesk MotionBuilder. Instead of cutting directly between clips, we create a seamless transition from a running animation into a sliding animation.
+
+            <br><br>
+
+            This workflow is especially important in game animation pipelines where smooth transitions directly impact the quality of gameplay.
+
+            <br><br>
+
+            <strong>Why Blending Matters</strong><br><br>
+
+            When two animation clips are placed back-to-back without blending, the result often feels abrupt and unnatural. In action-based animations — such as a run transitioning into a slide — poor transitions can cause visible popping, foot sliding, or unnatural body shifts.
+
+            <br><br>
+
+            To solve this, Motion Builder’s Story Mode allows us to overlap clips and create proper transition entries.
+
+            <br><br>
+
+            <strong>What This Tutorial Covers</strong><br><br>
+
+            In this tutorial, we:
+            <br><br>
+
+            • Add running and sliding clips into Story Mode<br>
+            • Overlap both animations to create a transition region<br>
+            • Use Match Options to align the character properly<br>
+            • Adjust the transition entry for a smoother blend<br>
+            • Refine timing for more natural motion<br>
+
+            <br><br>
+
+            By overlapping the clips, Motion Builder automatically creates a blending zone. Using Match Options ensures that the character’s hips and root position align correctly before the transition occurs.
+
+            <br><br>
+
+            <strong>Using Match Options for Cleaner Transitions</strong><br><br>
+
+            Match Options are a powerful feature when blending animations. They allow you to align position and orientation between clips before the transition begins.
+
+            <br><br>
+
+            For a run-to-slide example, proper matching helps:
+            <br><br>
+
+            • Maintain forward momentum<br>
+            • Avoid snapping in the hips<br>
+            • Reduce foot sliding<br>
+            • Preserve natural weight shift<br>
+
+            <br><br>
+
+            <strong>Practical Application in Game Development</strong><br><br>
+
+            This type of transition is common in gameplay systems where a player moves from sprinting into a slide or crouch action. Preparing animations properly in Motion Builder ensures they integrate cleanly into engines like Unity or Unreal Engine.
+
+            <br><br>
+
+            By mastering Story Mode blending and transition entries, you build a stronger foundation for production-ready animation workflows.
+
+            <br><br>
+            
+
+        </div>
+
     </div>
 </div>
 
