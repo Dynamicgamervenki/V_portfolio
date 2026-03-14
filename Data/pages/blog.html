@@ -52,11 +52,11 @@
                 </div>
 
                 <div class="btn-career-5"
-                     style="width: 200px; height: 150px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 10px; opacity: 0.4; cursor: not-allowed; border-style: dashed;">
+                     style="width: 200px; height: 150px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 10px; line-height: 1.5;"
+                     onclick="document.getElementById('blog-menu').style.display='none'; document.getElementById('blog-post-5').style.display='block';">
 
-                    <div style="font-weight: bold; letter-spacing: 1px; margin-bottom: 5px; text-align: center;">CLEANING UP<br>MOCAP DATA</div>
-                    <i class="fa fa-lock" aria-hidden="true" style="font-size: 1.5em; margin-bottom: 5px;"></i>
-                    <div style="letter-spacing: 2px; font-size: 0.8em;">COMING SOON</div>
+                    <div style="font-weight: bold; letter-spacing: 1px;">MOTION BUILDER<br>ESSENTIALS – 05</div>
+                    <div style="font-size: 0.7em; margin-top: 5px; color: #aaa;">Multi-Referential Constraint</div>
                 </div>
 
             </div>
@@ -203,7 +203,7 @@
     <div class="edu">
 
         <div class="edu-title" style="text-align: center; letter-spacing: 2px;">
-            Motion Builder Essentials – 4<br>
+            Motion Builder Essentials – 04<br>
             <span style="font-size: 0.7em;">
                 Blending Animations in Story Mode
             </span>
@@ -214,7 +214,7 @@
         <div style="text-align: center; margin-bottom: 25px;">
             <iframe width="100%" height="400"
                     src="https://www.youtube.com/embed/n5vKndaitBI"
-                    title="Motion Builder Essentials – 4"
+                    title="Motion Builder Essentials – 04"
                     frameborder="0"
                     allowfullscreen
                     style="border: 1px solid #333; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
@@ -285,7 +285,79 @@
             By mastering Story Mode blending and transition entries, you build a stronger foundation for production-ready animation workflows.
 
             <br><br>
-            
+
+
+        </div>
+
+    </div>
+</div>
+
+<div id="blog-post-5" style="display: none;">
+
+    <br><br><br>
+
+    <div class="edu">
+
+        <div class="edu-title" style="text-align: center; letter-spacing: 2px;">
+            Motion Builder Essentials – 05<br>
+            <span style="font-size: 0.7em;">
+                Multi-Referential Constraint
+            </span>
+        </div>
+
+        <br>
+
+        <div style="text-align: center; margin-bottom: 25px;">
+            <iframe width="100%" height="400"
+                    src="https://www.youtube.com/embed/qOwvixwyb6U"
+                    title="Motion Builder Essentials – 05"
+                    frameborder="0"
+                    allowfullscreen
+                    style="border: 1px solid #333; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
+            </iframe>
+        </div>
+
+        <div style="text-align: justify; line-height: 1.6;">
+
+            In this tutorial, I explore the use of the Multi-Referential Constraint in Autodesk MotionBuilder and how it can be used to switch control between different objects during an animation.
+            <br><br>
+
+            For this example, I created a short animation where the character takes a phone from the pocket, makes a phone call, and then places the phone back into the pocket. This type of animation requires changing the parent reference of the prop during the timeline, which is where the Multi-Referential Constraint becomes very useful.
+            <br><br>
+
+            At the start of the animation, the phone is attached to a holder inside the pocket.<br>
+            The holder reference weight is set to 100, so the phone follows the pocket.
+            <br><br>
+
+            When the character reaches for the phone, I switch the weight from the holder to the Right Wrist Effector by setting the wrist effector weight to 100. This makes the phone follow the hand instead of the pocket.
+            <br><br>
+
+            After the character finishes the phone call, the weight is switched back to the holder so the phone can return to the pocket correctly.
+            <br><br>
+
+            In this setup, I also used a Null element for the phone.<br>
+            Instead of constraining the animation directly to the phone model, the constraint is applied to a Null object, and the phone is parented to that Null.
+            <br><br>
+
+            This makes the setup more flexible, because if the phone asset needs to be replaced later, the animation will still work without any changes. The animation depends on the Null element rather than the model itself, which is a common workflow in production pipelines.
+            <br><br>
+
+            This workflow is commonly used in MotionBuilder for:
+            <br><br>
+
+            • Prop interaction animations<br>
+            • Switching object parents during animation<br>
+            • Motion capture cleanup<br>
+            • Cinematic animation workflows<br>
+            • Game animation pipelines<br>
+            • Asset replacement without breaking animation<br>
+
+            <br><br>
+
+            The Multi-Referential Constraint is a powerful tool in MotionBuilder and is essential when working with props, especially when an object needs to change its reference during the animation.
+            <br><br>
+
+            This tutorial is part of my Motion Builder Essentials series, where I cover important tools and workflows used in production.
 
         </div>
 
