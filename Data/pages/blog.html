@@ -112,7 +112,7 @@
     <br>
 
     <div class="container" align="center">
-        <p>Coming soon...</p> 
+        <p>Coming soon...</p>
     </div>
 
     <div class="blog-back-wrapper">
@@ -130,7 +130,18 @@
     <br>
 
     <div class="container" align="center">
-        <p>Coming soon...</p>
+        <section class="buttons_career">
+            <div class="button_career_container">
+
+                <div class="btn-career-5 blog-card"
+                     onclick="document.getElementById('development-blogs-menu').style.display='none'; document.getElementById('blog-post-6').style.display='block';">
+
+                    <div class="blog-card-title">OVERRIDE<br>DEVLOG #1</div>
+                    <div class="blog-card-subtitle">Week 1 – Core Systems Prototype</div>
+                </div>
+
+            </div>
+        </section>
     </div>
 
     <div class="blog-back-wrapper">
@@ -138,6 +149,8 @@
     </div>
 
 </div>
+
+<!-- ==================== Motion Builder Posts ==================== -->
 
 <div id="blog-post-1" style="display: none;">
 
@@ -160,8 +173,8 @@
         </div>
 
         <div class="blog-text">
-            <strong align="center">Characterization</strong><br>
-            Characterization is the process of defining a character’s skeleton in Autodesk MotionBuilder by mapping each bone or joint to MotionBuilder’s standard character template.
+            <strong>Characterization</strong><br>
+            Characterization is the process of defining a character's skeleton in Autodesk MotionBuilder by mapping each bone or joint to MotionBuilder's standard character template.
             <br><br>
 
             <strong>Retargeting</strong><br>
@@ -195,7 +208,7 @@
 
         <div class="blog-text">
             <strong>What Are MotionBuilder Poses?</strong><br><br>
-            A Pose is a saved snapshot of your character’s skeletal position. It captures transforms of selected joints or the full body so you can quickly reuse the same configuration across animations.
+            A Pose is a saved snapshot of your character's skeletal position. It captures transforms of selected joints or the full body so you can quickly reuse the same configuration across animations.
             <br><br>
 
             <strong>What Can You Do with Poses?</strong><br><br>
@@ -210,7 +223,6 @@
             • Build reusable pose libraries<br>
             • Improve consistency across shots<br>
         </div>
-
         <div class="blog-back-wrapper">
             <button class="btn-career-5 blog-back" onclick="document.getElementById('blog-post-2').style.display='none'; document.getElementById('motion-builder-menu').style.display='block'; document.getElementById('pt').scrollIntoView({behavior:'smooth'});">← Back</button>
         </div>
@@ -241,34 +253,18 @@
             Exporting animations from MotionBuilder to Unreal Engine is a critical step in any game animation pipeline. Even a small mistake during export can result in broken poses, missing motion, or incorrect imports inside Unreal. In this workflow, the key goal is to ensure that all animation data is baked correctly onto the skeleton and exported using the right FBX settings.
             <br><br>
 
-            Before exporting, it is mandatory to bake the animation to bones. MotionBuilder often drives characters using control rigs or constraints, but Unreal Engine only understands bone animation data. Baking ensures that every frame of animation is converted into keyframes directly on the skeleton, making it fully compatible with Unreal’s animation system.
+            Before exporting, it is mandatory to bake the animation to bones. MotionBuilder often drives characters using control rigs or constraints, but Unreal Engine only understands bone animation data. Baking ensures that every frame of animation is converted into keyframes directly on the skeleton, making it fully compatible with Unreal's animation system.
             <br><br>
 
             <strong>Key Exporting Steps</strong><br><br>
-            • Bake animation to bones before exporting<br>
-            • Ensure the correct Take is selected for export<br>
-            • Export only the necessary elements (Bones, Mesh if needed)<br>
-            • Avoid exporting control rigs, constraints, or extra scene data<br>
-            • Use FBX export settings optimized for game engines<br>
-            <br><br>
-            Baking the animation locks the motion into the skeleton and prevents issues such as missing animation, frozen characters, or incorrect transforms inside Unreal Engine.
-            <br><br>
-
-            <strong>FBX Export Settings in MotionBuilder</strong><br><br>
-            While exporting, it’s important to review each FBX option carefully. Exporting unnecessary data like cameras, lights, or control rigs can clutter the file and sometimes cause import warnings. Keeping the export clean—focused on bones and animation—results in a stable and predictable import in Unreal Engine. Selecting the correct take ensures that Unreal imports the intended animation clip.
+            • Bake animation to skeleton bones before export<br>
+            • Use FBX export format for Unreal compatibility<br>
+            • Ensure frame range covers the full animation<br>
+            • Disable unnecessary data like cameras and lights<br>
+            • Match frame rate between MotionBuilder and Unreal<br>
+            • Verify bone hierarchy is clean before export<br>
             <br><br>
 
-            <strong>Importing into Unreal Engine</strong><br><br>
-            Once inside Unreal Engine, animations should be imported by selecting the correct Skeletal Mesh. Unreal uses the skeletal hierarchy to properly map the animation data. Choosing the wrong skeletal mesh can lead to broken animations, incorrect bone rotations, or failed imports.
-            <br><br>
-
-            After import, it’s always a good practice to preview the animation inside Unreal to confirm:
-            <br><br>
-            • The motion plays correctly<br>
-            • No bones are offset or twisted<br>
-            • The animation matches what was authored in MotionBuilder<br>
-            <br><br>
-            <strong>Final Thoughts</strong><br><br>
             A clean export pipeline saves a lot of debugging time later in production. By baking animations to bones, using proper FBX export settings, and selecting the correct skeletal mesh in Unreal Engine, you ensure a reliable and game-ready animation workflow.
         </div>
 
@@ -320,7 +316,7 @@
 
             <br><br>
 
-            To solve this, Motion Builder’s Story Mode allows us to overlap clips and create proper transition entries.
+            To solve this, Motion Builder's Story Mode allows us to overlap clips and create proper transition entries.
 
             <br><br>
 
@@ -337,7 +333,7 @@
 
             <br><br>
 
-            By overlapping the clips, Motion Builder automatically creates a blending zone. Using Match Options ensures that the character’s hips and root position align correctly before the transition occurs.
+            By overlapping the clips, Motion Builder automatically creates a blending zone. Using Match Options ensures that the character's hips and root position align correctly before the transition occurs.
 
             <br><br>
 
@@ -366,7 +362,6 @@
             By mastering Story Mode blending and transition entries, you build a stronger foundation for production-ready animation workflows.
 
             <br><br>
-
 
         </div>
 
@@ -447,6 +442,69 @@
 
         <div class="blog-back-wrapper">
             <button class="btn-career-5 blog-back" onclick="document.getElementById('blog-post-5').style.display='none'; document.getElementById('motion-builder-menu').style.display='block'; document.getElementById('pt').scrollIntoView({behavior:'smooth'});">← Back</button>
+        </div>
+
+    </div>
+</div>
+
+<!-- ==================== Dev Log Posts ==================== -->
+
+<div id="blog-post-6" style="display: none;">
+
+    <br><br><br>
+
+    <div class="edu">
+
+        <div class="edu-title blog-post-heading">
+            Override Devlog #1<br>
+            <span class="blog-card-subtitle">Week 1 – Core Systems</span>
+        </div>
+
+        <br>
+
+        <div class="blog-video">
+            <iframe width="100%" height="400"
+                    src="https://www.youtube.com/embed/WMr3EfWVBPs"
+                    title="Override Devlog #1"
+                    frameborder="0"
+                    allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="blog-text">
+
+            Welcome to Week 1 of development for Override, a top-down stealth game. The project recently migrated to Unreal Engine 5, and these first 7 days were entirely focused on pure prototyping — getting the raw mechanics and logic locked in using the default map.
+            <br><br>
+
+            The core systems were built by heavily utilising UE5's Gameplay Ability System (GAS) and AI Behavior Trees. Here is a breakdown of everything built this week:
+            <br><br>
+
+            <strong>🧠 Enemy AI Patrolling</strong><br>
+            Set up Behavior Trees for smooth, spline-based patrol routes, giving enemies a natural and predictable movement loop for the player to study and exploit.
+            <br><br>
+
+            <strong>🔗 Toggle Ability</strong><br>
+            Engineered a direct hacking tether system that allows the player to interact with doors, electric boards, and enemy bots — the foundation of the game's core interaction model.
+            <br><br>
+
+            <strong>⚡ Hack Ability</strong><br>
+            Created contextual ability executions for tethered targets. Depending on what the player is connected to, they can shut down bots, override secure doors, or overload panels — each with distinct outcomes.
+            <br><br>
+
+            <strong>🤖 Hijack Ability</strong><br>
+            Built the logic to take direct control of an enemy AI, using their patrol routes as cover to proxy-hack other units from the inside. This opens up multi-layered stealth approaches where the player never needs to be physically present at a target.
+            <br><br>
+
+            <strong>🔄 Switch Back Ability</strong><br>
+            Added a seamless disconnect mechanic to drop the remote connection at any moment and instantly snap control back to the player character, keeping the gameplay loop fluid and responsive.
+            <br><br>
+
+            All five systems were built from scratch within the first week and form the complete interaction backbone of Override. Upcoming devlogs will cover polish, level design, and expanding the AI reaction system.
+
+        </div>
+
+        <div class="blog-back-wrapper">
+            <button class="btn-career-5 blog-back" onclick="document.getElementById('blog-post-6').style.display='none'; document.getElementById('development-blogs-menu').style.display='block'; document.getElementById('pt').scrollIntoView({behavior:'smooth'});">← Back</button>
         </div>
 
     </div>
