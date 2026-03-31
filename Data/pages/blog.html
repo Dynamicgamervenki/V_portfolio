@@ -140,6 +140,14 @@
                     <div class="blog-card-subtitle">Week 1 – Core Systems Prototype</div>
                 </div>
 
+                <!-- NEW WEEK 2 CARD ADDED HERE -->
+                <div class="btn-career-5 blog-card"
+                     onclick="document.getElementById('development-blogs-menu').style.display='none'; document.getElementById('blog-post-7').style.display='block';">
+
+                    <div class="blog-card-title">OVERRIDE<br>DEVLOG #2</div>
+                    <div class="blog-card-subtitle">Week 2 – AI Behavior & Visual Improvements</div>
+                </div>
+
             </div>
         </section>
     </div>
@@ -505,6 +513,65 @@
 
         <div class="blog-back-wrapper">
             <button class="btn-career-5 blog-back" onclick="document.getElementById('blog-post-6').style.display='none'; document.getElementById('development-blogs-menu').style.display='block'; document.getElementById('pt').scrollIntoView({behavior:'smooth'});">← Back</button>
+        </div>
+
+    </div>
+</div>
+
+<!-- NEW DEVLOG POST: WEEK 2 -->
+<div id="blog-post-7" style="display: none;">
+
+    <br><br><br>
+
+    <div class="edu">
+
+        <div class="edu-title blog-post-heading">
+            Override Devlog #2<br>
+            <span class="blog-card-subtitle">Week 2 – AI Behavior & Visual Improvements</span>
+        </div>
+
+        <br>
+
+        <div class="blog-video">
+            <iframe width="100%" height="400"
+                    src="https://www.youtube.com/embed/QC3A_Hf4sKk"
+                    title="Override Devlog #2"
+                    frameborder="0"
+                    allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="blog-text">
+
+            Welcome to Week 2 of development for Override, a top-down stealth game. With the core systems in place from the previous week, the focus shifted towards refining enemy behavior and improving the overall visual clarity of the game. This phase was less about building new systems and more about strengthening how existing mechanics feel and communicate to the player. Here’s a breakdown of everything worked on this week:
+            <br><br>
+
+            <strong>🧠 Enemy Patrol Coordination</strong><br>
+            Expanded the AI behavior to handle patrol intersections more intelligently. When two bots meet at a shared point, they now dynamically adjust their movement — one continues forward while the other redirects — preventing overlaps and creating more believable patrol patterns.
+            <br><br>
+
+            <strong>👁️ Line of Sight & Threat Response</strong><br>
+            Enemies are now fully reactive to the player’s presence. Detection has been tightened so that once the player enters an enemy’s line of sight, they are immediately eliminated, reinforcing stealth as a core gameplay pillar.
+            <br><br>
+
+            <strong>🧱 Context-Based Crouch (Cover System)</strong><br>
+            Implemented an auto-crouch system that activates when the player moves behind walls and cover objects. This allows for smoother stealth gameplay, enabling the player to stay hidden without requiring manual input.
+            <br><br>
+
+            <strong>💡 Environment Readability</strong><br>
+            Improved lighting and level layout to better guide the player. Adjustments were made to contrast, light placement, and spatial clarity to ensure important areas and paths are easier to read while maintaining the sci-fi aesthetic.
+            <br><br>
+
+            <strong>✨ Visual & Audio Feedback</strong><br>
+            Updated particle effects and sound design to enhance moment-to-moment feedback. Interactions now feel more impactful and responsive, improving overall game feel.
+            <br><br>
+
+            Week 2 was all about polish — making AI behavior more believable, improving player readability, and strengthening the overall feel of the game. With these improvements in place, the next steps will focus on expanding gameplay scenarios and adding more depth to player–enemy interactions.
+
+        </div>
+
+        <div class="blog-back-wrapper">
+            <button class="btn-career-5 blog-back" onclick="document.getElementById('blog-post-7').style.display='none'; document.getElementById('development-blogs-menu').style.display='block'; document.getElementById('pt').scrollIntoView({behavior:'smooth'});">← Back</button>
         </div>
 
     </div>
